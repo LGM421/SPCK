@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindX Cinema - Sign Up</title>
+    <link rel="stylesheet" href="./Sign In + Sign up.css">
+</head>
+
+<body>
+    <!-- Background overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Sign Up Form -->
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <small class="error" id="usernameError"></small>
+
+            <input type="email" id="email" placeholder="Email" required>
+            <small class="error" id="emailError"></small>
+
+            <input type="password" id="password" placeholder="Password" required>
+            <small class="error" id="passwordError"></small>
+
+            <input type="password" id="verifyPassword" placeholder="Verify Password" required>
+            <small class="error" id="verifyPasswordError"></small>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="signin-link">Already have an account? <a href="./Sign In.html">Sign in</a></p>
+    </div>
+
+    <script src="./Sign In + Sign up.js"></script>
+</body>
+
+</html>

@@ -10,6 +10,11 @@
 
 <body>
     <header>
+        <div id="cart">
+            <h2>Giỏ hàng</h2>
+            <p id="totalPrice" data-total="0">Tổng tiền: 0 VND</p>
+            <button id="checkoutButton" onclick="checkout()">Thanh toán</button>
+        </div>
         <h1>Chào mừng đến với khu bán vé xem phim</h1>
         <button id="logoutButton" onclick="logout()">Đăng xuất</button>
     </header>
@@ -32,23 +37,17 @@
         <div class="movie" data-price="105000">
             <h2>Phim 3: Tiếng gọi của oan hồn</h2>
             <p>Giá: 105,000 VND/vé</p>
-            <label for="quantity2">Số lượng vé:</label>
-            <input type="number" id="quantity2" min="1" value="1">
-            <button onclick="buyTicket('quantity2', 105000)">Mua vé</button>
+            <label for="quantity3">Số lượng vé:</label>
+            <input type="number" id="quantity3" min="1" value="1">
+            <button onclick="buyTicket('quantity3', 105000)">Mua vé</button>
         </div>
         <div class="movie" data-price="105000">
             <h2>Phim 4: Bản giao hưởng địa cầu</h2>
             <p>Giá: 105,000 VND/vé</p>
-            <label for="quantity2">Số lượng vé:</label>
-            <input type="number" id="quantity2" min="1" value="1">
-            <button onclick="buyTicket('quantity2', 105000)">Mua vé</button>
+            <label for="quantity4">Số lượng vé:</label>
+            <input type="number" id="quantity4" min="1" value="1">
+            <button onclick="buyTicket('quantity4', 105000)">Mua vé</button>
         </div>
-    </section>
-
-    <section id="cart">
-        <h2>Giỏ hàng</h2>
-        <p id="totalPrice" data-total="0">Tổng tiền: 0 VND</p>
-        <button id="checkoutButton" onclick="checkout()">Thanh toán</button>
     </section>
 
     <footer>

@@ -1,3 +1,5 @@
+/* Tổng quát */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -7,17 +9,53 @@ body {
     text-align: center;
 }
 
+
+/* Header */
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
     color: #fff;
     padding: 20px;
     position: relative;
 }
 
+#cart {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-width: 150px;
+}
+
+#cart h2 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+#cart p {
+    margin: 5px 0;
+}
+
+#cart button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#cart button:hover {
+    background-color: #45a049;
+}
+
 #logoutButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: relative;
     background-color: #ff6347;
     color: #fff;
     padding: 10px 15px;
@@ -29,6 +67,9 @@ header {
 #logoutButton:hover {
     background-color: #ff4500;
 }
+
+
+/* Movies Section */
 
 #movies {
     display: flex;
@@ -46,6 +87,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Buttons */
+
 button {
     background-color: #ff6347;
     color: #fff;
@@ -59,29 +103,8 @@ button:hover {
     background-color: #ff4500;
 }
 
-#cart {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 300px;
-    display: inline-block;
-}
 
-#checkoutButton {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#checkoutButton:hover {
-    background-color: #45a049;
-}
+/* Footer */
 
 footer {
     background-color: #333;

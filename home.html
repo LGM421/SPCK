@@ -10,51 +10,66 @@
 
 <body>
     <header>
-        <div id="cart">
-            <h2>Giỏ hàng</h2>
-            <p id="totalPrice" data-total="0">Tổng tiền: 0 VND</p>
+        <div>
             <button id="checkoutButton" onclick="checkout()">Thanh toán</button>
         </div>
         <marquee>
             <h1>Chào mừng đến với khu bán vé xem phim</h1>
         </marquee>
-        <button id="logoutButton" onclick="logout()">Đăng xuất</button>
+        <span><button id="logoutButton" onclick="logout()">Log out</button></span>
     </header>
 
-    <section id="movies">
-        <div class="movie" data-price="75000">
-            <img src="./Avengers Endgame.jpg" alt="Poster Phim Avengers" width="200">
-            <h2>Phim 1: Avengers</h2>
-            <p>Giá: 75,000 VND/vé</p>
-            <label for="quantity1">Số lượng vé:</label>
-            <input type="number" id="quantity1" min="1" value="1">
-            <button onclick="buyTicket('quantity1', 75000)">Mua vé</button>
-        </div>
-        <div class="movie" data-price="85000">
-            <img src="./smffh-localized_aw-vn-poster_6-3up_triangle.jpg" alt="Poster Phim Spider-Man" width="200">
-            <h2>Phim 2: Spider-Man</h2>
-            <p>Giá: 85,000 VND/vé</p>
-            <label for="quantity2">Số lượng vé:</label>
-            <input type="number" id="quantity2" min="1" value="1">
-            <button onclick="buyTicket('quantity2', 85000)">Mua vé</button>
-        </div>
-        <div class="movie" data-price="105000">
-            <img src="./maxresdefault.jpg" alt="Poster Phim Tiếng gọi của oán hồn" width="200">
-            <h2>Phim 3: Tiếng gọi của oán hồn</h2>
-            <p>Giá: 105,000 VND/vé</p>
-            <label for="quantity3">Số lượng vé:</label>
-            <input type="number" id="quantity3" min="1" value="1">
-            <button onclick="buyTicket('quantity3', 105000)">Mua vé</button>
-        </div>
-        <div class="movie" data-price="105000">
-            <img src="./drm24_-_poster.jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
-            <h2>Phim 4: Bản giao hưởng địa cầu</h2>
-            <p>Giá: 105,000 VND/vé</p>
-            <label for="quantity4">Số lượng vé:</label>
-            <input type="number" id="quantity4" min="1" value="1">
-            <button onclick="buyTicket('quantity4', 105000)">Mua vé</button>
-        </div>
-    </section>
+    <div class="main-container">
+        <!-- Hình ảnh bên trái -->
+        <img src="./CGV-120x600-.png" alt="Hình ảnh bên trái" class="side-image">
+
+        <!-- Khu vực danh sách phim -->
+        <section id="movies">
+            <div class="movie" data-price="75000">
+                <img src="./Avengers Endgame.jpg" alt="Poster Phim Avengers" width="200">
+                <h2>Phim 1: Avengers</h2>
+                <p>Giá: 75,000 VND/vé</p>
+                <label for="quantity1">Số lượng vé:</label>
+                <input type="number" id="quantity1" min="1" value="1">
+                <button onclick="buyTicket('quantity1', 75000, 'Avengers')">Mua vé</button>
+            </div>
+            <div class="movie" data-price="85000">
+                <img src="./smffh-localized_aw-vn-poster_6-3up_triangle.jpg" alt="Poster Phim Spider-Man" width="200">
+                <h2>Phim 2: Spider-Man</h2>
+                <p>Giá: 85,000 VND/vé</p>
+                <label for="quantity2">Số lượng vé:</label>
+                <input type="number" id="quantity2" min="1" value="1">
+                <button onclick="buyTicket('quantity2', 85000, 'Spider-Man')">Mua vé</button>
+            </div>
+            <div class="movie" data-price="105000">
+                <img src="./maxresdefault.jpg" alt="Poster Phim Tiếng gọi của oán hồn" width="200">
+                <h2>Phim 3: Tiếng gọi của oán hồn</h2>
+                <p>Giá: 105,000 VND/vé</p>
+                <label for="quantity3">Số lượng vé:</label>
+                <input type="number" id="quantity3" min="1" value="1">
+                <button onclick="buyTicket('quantity3', 105000, 'Tiếng gọi của oán hồn')">Mua vé</button>
+            </div>
+            <div class="movie" data-price="105000">
+                <img src="./drm24_-_poster.jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
+                <h2>Phim 4: Bản giao hưởng địa cầu</h2>
+                <p>Giá: 105,000 VND/vé</p>
+                <label for="quantity4">Số lượng vé:</label>
+                <input type="number" id="quantity4" min="1" value="1">
+                <button onclick="buyTicket('quantity4', 105000, 'Bản giao hưởng địa cầu')">Mua vé</button>
+            </div>
+            <div class="movie" data-price="100000">
+                <img src="./tải xuống.jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
+                <h2>Phim 5: Hồn ma theo đuổi</h2>
+                <p>Giá: 100,000 VND/vé</p>
+                <label for="quantity4">Số lượng vé:</label>
+                <input type="number" id="quantity4" min="1" value="1">
+                <button onclick="buyTicket('quantity4', 100000, 'Bản giao hưởng địa cầu')">Mua vé</button>
+            </div>
+        </section>
+
+        <!-- Hình ảnh bên phải -->
+        <img src="./CGV-120x600-.png" alt="Hình ảnh bên phải" class="side-image">
+    </div>
     <script>
         window.embeddedChatbotConfig = {
             chatbotId: "onoSXQkpSoFDCkvPKdoQw",
@@ -63,11 +78,15 @@
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="onoSXQkpSoFDCkvPKdoQw" domain="www.chatbase.co" defer>
     </script>
-
     <footer>
         <p>&copy; 2024 Rạp Chiếu Phim. Bản quyền thuộc về chúng tôi.</p>
     </footer>
 
+    <div id="cart">
+        <h2>Giỏ hàng</h2>
+        <p id="totalPrice" data-total="0">Tổng tiền: 0 VND</p>
+        <button id="checkoutButton" onclick="checkout()">Thanh toán</button>
+    </div>
     <script src="./home.js"></script>
 </body>
 

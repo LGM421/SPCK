@@ -5,40 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán</title>
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./checkout.css">
 </head>
 
 <body>
     <header>
-        <h1>Thông Tin Thanh Toán</h1>
+        <h1>Trang Thanh Toán</h1>
     </header>
 
-    <section id="payment">
+    <main>
         <h2>Thông tin thanh toán</h2>
-        <p id="totalAmount">Tổng tiền: 0 VND</p>
+        <p id="totalAmount">Đang xử lý...</p>
         <button onclick="confirmPayment()">Xác nhận thanh toán</button>
-    </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Rạp Chiếu Phim. Bản quyền thuộc về chúng tôi.</p>
-    </footer>
 
     <script>
         // Lấy tổng tiền từ URL và hiển thị
-        function getTotalFromURL() {
-            const params = new URLSearchParams(window.location.search);
-            const total = params.get('total');
-            document.getElementById("totalAmount").innerText = `Tổng tiền: ${parseInt(total).toLocaleString()} VND`;
-        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const total = urlParams.get('total');
 
-        // Gọi hàm khi trang tải
-        window.onload = getTotalFromURL;
+        if (total) {
+            document.getElementById('totalAmount').innerText = `Tổng tiền cần thanh toán: ${parseInt(total).toLocaleString()} VND`;
+        } else {
+            document.getElementById('totalAmount').innerText = "Không có thông tin thanh toán.";
+        }
 
         function confirmPayment() {
-            alert("Thanh toán thành công!");
-            window.location.href = "home.html"; // Quay về trang chính sau khi thanh toán
+            alert("Thanh toán thành công! Cảm ơn bạn đã mua vé.");
+            window.location.href = "home.html"; // Quay lại trang chính sau khi thanh toán
         }
     </script>
+    <footer>
+        <p>&copy; 2024 Rạp Chiếu Phim. Bản quyền thuộc về chúng tôi.</p>
+    </footer>
 </body>
 
 </html>

@@ -27,37 +27,53 @@
 /* Form Container */
 
 .form-container {
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 300px;
-    padding: 2em;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Làm tối nền để nổi bật hơn */
+    width: 400px;
+    /* Tăng chiều rộng form */
+    padding: 3em;
+    /* Tăng padding */
+    border-radius: 10px;
+    /* Tăng độ bo góc */
     color: #fff;
-    margin: 100px auto;
+    margin: 120px auto;
+    /* Tăng khoảng cách từ trên */
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    /* Đổ bóng mạnh hơn */
 }
 
 .form-container h2 {
-    margin-bottom: 1em;
+    font-size: 2em;
+    /* Tăng kích thước chữ */
+    margin-bottom: 1.5em;
 }
 
 .form-container input {
     width: 100%;
-    padding: 0.8em;
-    margin: 0.5em 0;
+    padding: 1em;
+    /* Tăng kích thước padding */
+    margin: 0.8em 0;
+    /* Tăng khoảng cách giữa các ô */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    /* Tăng độ bo góc */
+    font-size: 1.1em;
+    /* Tăng kích thước chữ */
 }
 
 .form-container button {
     width: 100%;
-    padding: 0.8em;
-    margin: 1em 0;
+    padding: 1em;
+    /* Tăng kích thước nút */
+    margin: 1.5em 0;
+    /* Tăng khoảng cách với các thành phần khác */
     background-color: #e50914;
     border: none;
     color: #fff;
-    font-size: 1em;
-    border-radius: 4px;
+    font-size: 1.2em;
+    /* Tăng kích thước chữ */
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -68,32 +84,27 @@
 .options {
     display: flex;
     align-items: center;
-    /* Center align items vertically */
-    margin-top: 1em;
-    /* Spacing above the options */
+    margin-top: 1.5em;
+    /* Tăng khoảng cách phía trên */
 }
 
 .options input[type="checkbox"] {
-    width: 16px;
-    /* Set the width of the checkbox */
-    height: 16px;
-    /* Set the height of the checkbox */
-    margin-right: 0.5em;
-    /* Space between checkbox and label */
+    width: 18px;
+    /* Tăng kích thước checkbox */
+    height: 18px;
+    margin-right: 0.6em;
 }
 
 .options label {
     margin-left: 0.5em;
-    /* Space between the checkbox and the label */
 }
 
 .options a {
     margin-left: auto;
-    /* Pushes the link to the far right */
     color: #b3b3b3;
     text-decoration: none;
-    font-size: 0.9em;
-    /* Adjust font size to match the label */
+    font-size: 1em;
+    /* Tăng kích thước chữ */
 }
 
 .options a:hover {
@@ -102,8 +113,9 @@
 
 .signup-link,
 .signin-link {
-    font-size: 0.9em;
-    margin-top: 1em;
+    font-size: 1em;
+    /* Tăng kích thước chữ */
+    margin-top: 1.5em;
 }
 
 .signup-link a,
@@ -123,7 +135,7 @@
 
 .error {
     color: #ff0000;
-    /* Red color for error messages */
-    font-size: 0.9em;
-    margin: 0.5em 0;
+    font-size: 1em;
+    /* Tăng kích thước chữ */
+    margin: 0.8em 0;
 }

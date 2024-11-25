@@ -48,10 +48,14 @@ header h1 {
 /* Movies Section */
 
 #movies {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    /* Sử dụng lưới */
+    grid-template-columns: repeat(4, 1fr);
+    /* Tạo 4 cột đều nhau */
     gap: 20px;
+    /* Khoảng cách giữa các phim */
+    padding: 20px;
+    /* Khoảng cách xung quanh */
 }
 
 .movie {

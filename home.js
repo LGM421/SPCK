@@ -35,21 +35,3 @@ function logout() {
         window.location.href = "Sign In.html";
     }
 }
-
-@media (max-width: 1024px) {
-    #movies {
-        grid-template-columns: repeat(3, 1fr); /* Hiển thị 3 cột trên màn hình vừa */
-    }
-}
-
-@media (max-width: 768px) {
-    #movies {
-        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên màn hình nhỏ */
-    }
-}
-
-@media (max-width: 480px) {
-    #movies {
-        grid-template-columns: 1fr; /* Hiển thị 1 cột trên điện thoại */
-    }
-}

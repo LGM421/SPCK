@@ -20,7 +20,7 @@ function updateTotalPrice(amount) {
 
 function checkout() {
     const totalPriceElement = document.getElementById("totalPrice");
-    const totalAmount = parseInt(totalPriceElement.dataset.total) || 0;
+    const totalAmount = parseInt(stotalPriceElement.dataset.total) || 0;
 
     if (totalAmount === 0) {
         alert("Giỏ hàng của bạn trống. Vui lòng chọn vé trước khi thanh toán.");

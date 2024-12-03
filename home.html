@@ -18,6 +18,12 @@
         </marquee>
         <span><button id="logoutButton" onclick="logout()">Log out</button></span>
     </header>
+    <header>
+        <div>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm phim..." />
+            <button onclick="searchMovies()">Tìm kiếm</button>
+        </div>
+    </header>
 
     <div class="main-container">
         <!-- Hình ảnh bên trái -->
@@ -25,6 +31,7 @@
 
         <!-- Khu vực danh sách phim -->
         <section id="movies">
+            <!-- Phim 1 -->
             <div class="movie" data-price="75000">
                 <img src="./Avengers Endgame.jpg" alt="Poster Phim Avengers" width="200">
                 <h2>Phim 1: Avengers</h2>
@@ -33,6 +40,7 @@
                 <input type="number" id="quantity1" min="1" value="1">
                 <button onclick="buyTicket('quantity1', 75000, 'Avengers')">Mua vé</button>
             </div>
+            <!-- Phim 2 -->
             <div class="movie" data-price="85000">
                 <img src="./smffh-localized_aw-vn-poster_6-3up_triangle.jpg" alt="Poster Phim Spider-Man" width="200">
                 <h2>Phim 2: Spider-Man</h2>
@@ -41,6 +49,7 @@
                 <input type="number" id="quantity2" min="1" value="1">
                 <button onclick="buyTicket('quantity2', 85000, 'Spider-Man')">Mua vé</button>
             </div>
+            <!-- Phim 3 -->
             <div class="movie" data-price="105000">
                 <img src="./maxresdefault.jpg" alt="Poster Phim Tiếng gọi của oán hồn" width="200">
                 <h2>Phim 3: Tiếng gọi của oán hồn</h2>
@@ -49,6 +58,7 @@
                 <input type="number" id="quantity3" min="1" value="1">
                 <button onclick="buyTicket('quantity3', 105000, 'Tiếng gọi của oán hồn')">Mua vé</button>
             </div>
+            <!-- Phim 4 -->
             <div class="movie" data-price="105000">
                 <img src="./drm24_-_poster.jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
                 <h2>Phim 4: Bản giao hưởng địa cầu</h2>
@@ -57,39 +67,52 @@
                 <input type="number" id="quantity4" min="1" value="1">
                 <button onclick="buyTicket('quantity4', 105000, 'Bản giao hưởng địa cầu')">Mua vé</button>
             </div>
+            <!-- Phim 5 -->
             <div class="movie" data-price="100000">
                 <img src="./tải xuống.jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
                 <h2>Phim 5: Hồn ma theo đuổi</h2>
                 <p>Giá: 100,000 VND/vé</p>
-                <label for="quantity4">Số lượng vé:</label>
-                <input type="number" id="quantity4" min="1" value="1">
-                <button onclick="buyTicket('quantity4', 100000, 'Bản giao hưởng địa cầu')">Mua vé</button>
+                <label for="quantity5">Số lượng vé:</label>
+                <input type="number" id="quantity5" min="1" value="1">
+                <button onclick="buyTicket('quantity5', 100000, 'Hồn ma theo đuổi')">Mua vé</button>
             </div>
-            <div class="movie" data-price="100000">
-                <img src="./tải xuống (1).jpg" alt="Poster Phim Bản giao hưởng địa cầu" width="200">
-                <h2>Phim 5: Conan</h2>
+            <!-- Phim 6 -->
+            <div class="movie" data-price="110000">
+                <img src="./tải xuống (1).jpg" alt="Poster Phim Conan" width="200">
+                <h2>Phim 6: Conan</h2>
                 <p>Giá: 110,000 VND/vé</p>
-                <label for="quantity4">Số lượng vé:</label>
-                <input type="number" id="quantity4" min="1" value="1">
-                <button onclick="buyTicket('quantity4', 100000, 'Bản giao hưởng địa cầu')">Mua vé</button>
+                <label for="quantity6">Số lượng vé:</label>
+                <input type="number" id="quantity6" min="1" value="1">
+                <button onclick="buyTicket('quantity6', 110000, 'Conan')">Mua vé</button>
             </div>
-
         </section>
+        <div id="totalPrice" data-total="0"></div>
 
         <!-- Hình ảnh bên phải -->
         <img src="./CGV-120x600-.png" alt="Hình ảnh bên phải" class="side-image">
     </div>
+
     <script>
         window.embeddedChatbotConfig = {
             chatbotId: "onoSXQkpSoFDCkvPKdoQw",
             domain: "www.chatbase.co"
         }
     </script>
-    <script src="https://www.chatbase.co/embed.min.js" chatbotId="onoSXQkpSoFDCkvPKdoQw" domain="www.chatbase.co" defer>
+
+    <script>
+        < script >
+            window.embeddedChatbotConfig = {
+                chatbotId: "nddjECJwh8wYOkBoUUnxr",
+                domain: "www.chatbase.co"
+            }
     </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="nddjECJwh8wYOkBoUUnxr" domain="www.chatbase.co" defer>
+    </script>
+
     <footer>
         <p>&copy; 2024 Rạp Chiếu Phim. Bản quyền thuộc về chúng tôi.</p>
     </footer>
+
     <script src="./home.js"></script>
 </body>
 

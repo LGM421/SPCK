@@ -1,17 +1,17 @@
 // Truy xuất các phần tử từ DOM
-const registerForm = document.getElementById('registerForm');
+const registerForm = document.getElementById('signupForm');
 const usernameInput = document.getElementById('username');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
-const confirmPasswordInput = document.getElementById('confirmPassword');
-const phoneInput = document.getElementById('phone');
+const confirmPasswordInput = document.getElementById('verifyPassword');
+
 
 // Tham chiếu đến các phần tử hiển thị lỗi
 const usernameError = document.getElementById("usernameError");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
-const confirmPasswordError = document.getElementById("confirmPasswordError");
-const phoneError = document.getElementById("phoneError");
+const confirmPasswordError = document.getElementById("verifyPasswordError");
+
 
 // Thêm sự kiện submit vào form
 registerForm.addEventListener("submit", function(e) {
@@ -22,14 +22,14 @@ registerForm.addEventListener("submit", function(e) {
     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
     const confirmPasswordValue = confirmPasswordInput.value.trim();
-    const phoneValue = phoneInput.value.trim();
+
 
     // Xóa thông báo lỗi cũ
     usernameError.textContent = "";
     emailError.textContent = "";
     passwordError.textContent = "";
     confirmPasswordError.textContent = "";
-    phoneError.textContent = "";
+
 
     let isValid = true;
 
@@ -54,10 +54,6 @@ registerForm.addEventListener("submit", function(e) {
         isValid = false;
     }
 
-    if (phoneValue.length < 10) {
-        phoneError.textContent = "Số điện thoại phải có ít nhất 10 chữ số.";
-        isValid = false;
-    }
 
     // Nếu tất cả thông tin hợp lệ, thực hiện đăng ký
     if (isValid) {
@@ -66,7 +62,6 @@ registerForm.addEventListener("submit", function(e) {
             username: usernameValue,
             email: emailValue,
             password: passwordValue,
-            phone: phoneValue,
         };
 
         // Lưu thông tin người dùng vào localStorage dưới key 'user'

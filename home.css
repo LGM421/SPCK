@@ -25,11 +25,9 @@ header {
 
 #search-container {
     display: flex;
-    justify-content: center;
-    /* Căn giữa */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
-    width: 100%;
+    flex-grow: 1;
+    margin-right: 20px;
 }
 
 #searchInput {
@@ -55,7 +53,6 @@ header h1 {
     white-space: nowrap;
 }
 
-#checkoutButton:hover,
 #logoutButton:hover {
     background-color: #ff4500;
 }

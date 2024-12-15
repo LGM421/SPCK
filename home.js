@@ -25,7 +25,7 @@ function updateTotalPrice(amount) {
 
     totalPriceElement.dataset.total = newTotal;
     totalPriceElement.style.display = "block";
-    totalPriceElement.innerText = `Tổng tiền: ${newTotal.toLocaleString()} VND`;
+    //totalPriceElement.innerText = `Tổng tiền: ${newTotal.toLocaleString()} VND`;
 }
 
 // Hàm thanh toán
